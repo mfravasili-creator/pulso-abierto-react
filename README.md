@@ -72,4 +72,9 @@ export default defineConfig([
   },
 ])
 
-```
+
+## Mejora de mantenibilidad (Punto 2)
+
+* **Problema identificado:** El mensaje de lista vacía estaba escrito directamente dentro del JSX en `src/CryptoList.tsx`, mezclando texto literal dentro de la estructura del componente.
+* **Cambio realizado:** Se extrajo el mensaje a la constante `EMPTY_LIST_MESSAGE` en `src/CryptoList.tsx` manteniendo el mismo renderizado y comportamiento de la aplicación.
+* **Comprobación sin regresiones:** Se verificó la compilación con `npm run build` sin errores y se comprobó que el componente sigue mostrando el mensaje esperado cuando no hay elementos.
